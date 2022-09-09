@@ -2,9 +2,9 @@
 
 ######################
 # Change these variables
-USER_NAME=hx
-USER_PASS=1324
-ROOT_PASS=1324
+USER_NAME=your_user_name
+USER_PASS=1234
+ROOT_PASS=1234
 ######################
 
 sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ./package_list/mbr.txt
