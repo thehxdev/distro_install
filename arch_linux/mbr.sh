@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 ######################
-# Change these variables
+# Change these variables -- Don't use spaces.
 USER_NAME=your_user_name
 USER_PASS=1234
 ROOT_PASS=1234
