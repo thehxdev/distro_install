@@ -5,6 +5,8 @@ lightdm-gtk-greeter-settings
 xfce4
 xfce4-goodies
 xfce4-xkb-plugin
+arandr
+firefox
 papirus-icon-theme
 unrar
 unzip

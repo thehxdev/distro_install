@@ -3,6 +3,7 @@ sddm
 plasma
 pcmanfm
 firefox
+arandr
 papirus-icon-theme
 ksystemlog
 gparted

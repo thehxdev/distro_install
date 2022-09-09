@@ -3,6 +3,8 @@ gnome
 gnome-extra
 gnome-shell
 gdm
+arandr
+firefox
 papirus-icon-theme
 unrar
 unzip

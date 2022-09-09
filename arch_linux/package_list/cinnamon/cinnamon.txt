@@ -4,6 +4,8 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 cinnamon
 cinnamon-control-center
+arandr
+firefox
 papirus-icon-theme
 unrar
 unzip
