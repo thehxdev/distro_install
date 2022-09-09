@@ -1,7 +1,13 @@
 #! /usr/bin/env bash
 
-echo "Installing Packages..."
-sudo pacman -Sy --noconfirm --disable-download-timeout - < ./package_list/uefi.txt
+######################
+# Change these variables
+USER_NAME=hx
+USER_PASS=1324
+ROOT_PASS=1324
+######################
+
+sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ./package_list/uefi.txt
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hwclock --systohc
@@ -14,7 +20,7 @@ echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
-echo root:1234 | chpasswd       # Change root password
+echo root:$ROOT_PASS | chpasswd
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -26,12 +32,8 @@ systemctl enable sshd
 systemctl enable reflector.timer
 systemctl enable acpid
 
-# Change USER in this section.
-useradd -m USER
-echo USER:1234 | chpasswd
-usermod -aG wheel USER
+useradd -m $USER_NAME
+echo $USER_NAME:$USER_PASS | chpasswd
+usermod -aG wheel $USER_NAME
 sed -i '85s/.//' /etc/sudoers
 
-echo "########################"
-echo "If you don't set the root Password in script,the default password is 1234"
-echo "########################"
