@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ../package_list/kde/kde.txt
+sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ../package_list/kde/kde_full.txt
 
 # If you use Intel, Install these packages too:
 sudo pacman -S xf86-video-intel intel-ucode
