@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ../package_list/gnome/gnome.txt
+sudo pacman -Sy --needed --disable-download-timeout --ignore gnome-games,gnome-chess - < ../package_list/gnome/gnome.txt
 
 sudo systemctl enable dbus
 sudo systemctl enable gdm.service
