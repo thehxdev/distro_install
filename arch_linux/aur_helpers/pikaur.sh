@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-sudo pacman -Sy git curl
+sudo pacman -Sy --noconfirm --needed --disable-download-timeout git curl
 
 sleep 3
 
