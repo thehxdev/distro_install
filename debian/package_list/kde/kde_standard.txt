@@ -5,6 +5,7 @@ sddm
 dbus
 dbus-x11
 pulseaudio
+plasma-pa
 chromium
 arandr
 papirus-icon-theme
@@ -19,6 +20,7 @@ dpkg
 openvpn
 openssh-client
 pptp-linux
+plasma-nm
 network-manager
 network-manager-openvpn
 network-manager-pptp

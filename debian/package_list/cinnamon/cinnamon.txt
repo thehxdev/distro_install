@@ -21,6 +21,7 @@ openvpn
 openssh-client
 pptp-linux
 network-manager
+network-manager-gnome
 network-manager-openvpn-gnome
 network-manager-pptp-gnome
 network-manager-l2tp-gnome
