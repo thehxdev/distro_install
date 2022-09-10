@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 
-sudo apt install xserver-xorg-video-intel
+sudo apt install xserver-xorg-video-intel -y
 

@@ -3,7 +3,7 @@ xorg-dev
 kde-plasma-desktop
 sddm
 dbus
-dbux-x11
+dbus-x11
 pcmanfm
 ark
 kate

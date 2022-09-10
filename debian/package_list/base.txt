@@ -1,0 +1,14 @@
+sudo
+curl
+build-essential
+automake
+sed
+gzip
+xz-utils
+bzip2
+tar
+grep
+patch
+gawk
+iproute2
+

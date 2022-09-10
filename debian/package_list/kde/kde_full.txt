@@ -3,7 +3,7 @@ xorg-dev
 kde-full
 sddm
 dbus
-dbux-x11
+dbus-x11
 pulseaudio
 chromium
 arandr
