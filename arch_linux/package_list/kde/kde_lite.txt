@@ -21,8 +21,8 @@ okular
 archlinux-wallpaper
 dbus
 mpv
-networkmanager-openvpn
 openvpn
+networkmanager-openvpn
 spectacle
 kwallet
 kwalletmanager
