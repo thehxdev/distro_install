@@ -1,5 +1,8 @@
 # Add your prefered mirror to /etc/apt/sources.list
 
+If you not sure, Don't change mirror-list.
+use default debian mirror.
+
 ######################
 Debian 11 (bullseye) #
 ######################
