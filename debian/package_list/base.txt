@@ -11,4 +11,9 @@ grep
 patch
 gawk
 iproute2
-
+findutils
+libtool
+automake
+autoconf
+gettext
+m4

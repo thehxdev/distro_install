@@ -1,0 +1,18 @@
+# Add your prefered mirror to /etc/apt/sources.list
+
+######################
+Debian 11 (bullseye) #
+######################
+
+deb http://debian.asis.ai/debian bullseye main
+deb http://debian.asis.ai/debian-security bullseye-security main
+
+deb http://debian.parspack.com/debian//debian bullseye main
+deb http://debian.parspack.com/debian-security bullseye-security main
+
+deb http://mirror.aminidc.com/debian//debian bullseye main
+deb http://mirror.aminidc.com/debian-security bullseye-security main
+
+deb http://mirror.arvancloud.com/debian bullseye main
+deb http://mirror.arvancloud.com/debian-security bullseye-security main
+
