@@ -7,8 +7,6 @@ USER_PASS=1234
 ROOT_PASS=1234
 ######################
 
-sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ./package_list/uefi.txt
-
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
