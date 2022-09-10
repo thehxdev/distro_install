@@ -25,7 +25,6 @@ network-manager
 network-manager-openvpn
 network-manager-pptp
 network-manager-l2tp
-kwalletmanager
 kitty
 fish
 zsh
