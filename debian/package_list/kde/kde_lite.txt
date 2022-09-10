@@ -8,10 +8,9 @@ pcmanfm
 ark
 kate
 kcalc
-krunner
 kfind
-kcron
 kde-spectacle
+baloo-kf5
 okular
 pulseaudio
 chromium
