@@ -33,3 +33,5 @@ gvfs
 bleachbit
 tmux
 xarchiver
+htop
+breeze-gtk-theme

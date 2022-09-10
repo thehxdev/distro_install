@@ -4,5 +4,5 @@ sudo pacman -Sy --noconfirm --needed --disable-download-timeout - < ../../packag
 
 sudo systemctl enable dbus
 sudo systemctl enable sddm
-systemctl set-default graphical.target
+sudo systemctl set-default graphical.target
 

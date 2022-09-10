@@ -39,3 +39,4 @@ neovim
 font-manager
 tmxu
 xarchiver
+htop

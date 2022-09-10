@@ -34,3 +34,4 @@ font-manager
 xarchiver
 xreader
 tmux
+htop

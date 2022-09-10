@@ -33,3 +33,4 @@ font-manager
 libreoffice-still
 libreoffice-still-fr
 xarchiver
+htop

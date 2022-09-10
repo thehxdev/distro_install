@@ -34,5 +34,7 @@ gvfs
 bleachbit
 tmux
 xarchiver
+htop
 libreoffice
 libreoffice-l10n-fa
+breeze-gtk-theme
