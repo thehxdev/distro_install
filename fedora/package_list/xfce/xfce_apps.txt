@@ -1,6 +1,5 @@
 chromium
 arandr
-gparted
 viewnior
 unrar
 unzip
@@ -18,7 +17,6 @@ bleachbit
 tmux
 xarchiver
 htop
-breeze-cursor-theme
 flat-remix-theme
-flat-remix-icon-theme
 papirus-icon-theme
+breeze-cursor-theme
