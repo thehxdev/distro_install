@@ -12,7 +12,7 @@ pacstrap /mnt base base-devel linux linux-firmware linux-headers vi vim nano git
 
 ## Directory
 
-```bash
+```txt
 .
 ├── aur_helpers
 │   ├── paru.sh
