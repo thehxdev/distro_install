@@ -1,0 +1,5 @@
+[ir_fedora]
+name=iran_fedora
+mirrorlist=https://raw.githubusercontent.com/hxdevlover/distro_install/main/fedora/mirror.txt
+fastestmirror=True
+enable=1
