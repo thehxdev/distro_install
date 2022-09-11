@@ -10,6 +10,44 @@ Use scripts after chroot to `/mnt`. It means you MUST install base system with p
 pacstrap /mnt base base-devel linux linux-firmware linux-headers vi vim nano git curl
 ```
 
+## Directory
+
+```bash
+.
+├── aur_helpers
+│   ├── paru.sh
+│   ├── pikaur.sh
+│   └── yay.sh
+├── base_install.md
+├── desktop_env
+│   ├── cinnamon
+│   ├── gnome
+│   ├── kde
+│   └── xfce
+├── en_fonts.sh
+├── kvm.sh
+├── mbr-1-installation.sh
+├── mbr-2-configuration.sh
+├── mirror_list_ir
+│   ├── arvan_mirror.sh
+│   ├── bardia_tech.sh
+│   └── rasanegar_mirror.sh
+├── package_list
+│   ├── cinnamon
+│   ├── en_fonts.txt
+│   ├── gnome
+│   ├── kde
+│   ├── kvm.txt
+│   ├── mbr.txt
+│   ├── uefi.txt
+│   └── xfce
+├── README.md
+├── uefi-1-installation.sh
+└── uefi-2-configuration.sh
+
+12 directories, 18 files
+```
+
 ## Useful Packages
 
 ```bash
