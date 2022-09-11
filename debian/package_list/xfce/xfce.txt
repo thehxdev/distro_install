@@ -37,4 +37,5 @@ bleachbit
 tmux
 xarchiver
 htop
-materia-gtk-theme
+arc-theme
+darkmint-gtk-theme

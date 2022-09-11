@@ -18,6 +18,8 @@ bleachbit
 tmux
 xarchiver
 htop
-flat-remix-theme
+flat-remix-gtk2-theme
+flat-remix-gtk3-theme
+flat-remix-gtk4-theme
 papirus-icon-theme
 breeze-cursor-theme
