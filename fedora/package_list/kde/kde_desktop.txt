@@ -10,7 +10,6 @@ kscreen
 ksshaskpass
 kwallet
 kwalletmanager
-pam-kwalle
 kwayland-integration
 kwrited
 oxygen-sounds
