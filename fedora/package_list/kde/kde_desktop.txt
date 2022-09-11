@@ -1,7 +1,5 @@
 plasma-desktop
 plasma-drkonqi
-breeze-cursor-theme
-breeze-gtk
 bluedevil
 kde-gtk-config
 kdeplasma-addons
@@ -15,7 +13,7 @@ kwalletmanager
 pam-kwalle
 kwayland-integration
 kwrited
-oxygen-sound-theme
+oxygen-sounds
 plasma-oxygen
 plasma-browser-integration
 plasma-disks
@@ -27,7 +25,6 @@ plasma-nm-openvpn
 plasma-nm-strongswan
 plasma-nm-openconnect
 plasma-pa
-plasma-breeze
 plasma-oxygen
 plasma-systemmonitor
 plasma-thunderbolt
@@ -38,9 +35,5 @@ sddm
 sddm-breeze
 sddm-kcm
 dbus
-pulseaudio
-pulseaudio-libs
-pulseaudio-utils
-pulseaudio-qt
-alsa-plugins-pulseaudio
 xdg-desktop-portal-kde
+dnfdragora

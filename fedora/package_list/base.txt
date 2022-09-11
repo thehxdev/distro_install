@@ -19,3 +19,4 @@ autoconf
 gettext
 m4
 dnfdragora
+vim

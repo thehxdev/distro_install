@@ -4,7 +4,6 @@ kate
 kcalc
 kfind
 spectacle
-kf5-baloo
 okular
 chromium
 arandr
@@ -22,7 +21,6 @@ zsh
 alacritty
 aria2
 alsa-utils
-pavucontrol
 gvfs
 bleachbit
 tmux
