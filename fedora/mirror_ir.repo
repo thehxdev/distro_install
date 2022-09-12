@@ -1,6 +1,6 @@
 [ir_fedora]
 name=iran_fedora
-#mirrorlist=https://raw.githubusercontent.com/hxdevlover/distro_install/main/fedora/mirror.txt
 mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-36&arch=x86_64
 fastestmirror=True
 enable=1
+gpgcheck=0
