@@ -36,6 +36,8 @@ xfce4-notifyd
 xfce4-screensaver
 xfce4-screenshooter
 xfce4-taskmanager
+kitty
+alacritty
 lightdm
 lightdm-gtk
 lightdm-gtk-greeter-settings

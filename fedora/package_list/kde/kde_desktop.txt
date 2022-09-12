@@ -36,3 +36,5 @@ sddm-kcm
 dbus
 xdg-desktop-portal-kde
 dnfdragora
+kitty
+alacritty
