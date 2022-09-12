@@ -30,3 +30,6 @@ python3-xapp
 libtimezonemap
 xapps
 mint-themes
+lightdm
+lightdm-gtk
+lightdm-gtk-greeter-settings
