@@ -1,3 +1,4 @@
+cinnamon
 accountsservice
 caribou
 cinnamon-control-center
