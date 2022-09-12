@@ -10,7 +10,6 @@ gnome-backgrounds
 gnome-themes-extra
 gsound
 gstreamer1
-libcroco
 libgnomekbd
 keybinder3
 librsvg2
