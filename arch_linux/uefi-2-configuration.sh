@@ -2,9 +2,9 @@
 
 ######################
 # Change these variables -- Don't use spaces.
-USER_NAME=your_user_name
-USER_PASS=1234
-ROOT_PASS=1234
+USER_NAME=user_name
+USER_PASS=user_password
+ROOT_PASS=root_password
 ######################
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
