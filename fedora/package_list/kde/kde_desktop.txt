@@ -38,3 +38,12 @@ xdg-desktop-portal-kde
 dnfdragora
 kitty
 alacritty
+NetworkManager
+NetworkManager-adsl
+NetworkManager-pptp
+NetworkManager-sstp
+NetworkManager-wifi
+NetworkManager-openvpn
+network-manager-applet
+NetworkManager-strongswan
+NetworkManager-openconnect

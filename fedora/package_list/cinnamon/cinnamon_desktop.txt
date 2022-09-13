@@ -36,3 +36,12 @@ alacritty
 lightdm
 lightdm-gtk
 lightdm-gtk-greeter-settings
+NetworkManager
+NetworkManager-adsl
+NetworkManager-pptp
+NetworkManager-sstp
+NetworkManager-wifi
+NetworkManager-openvpn
+network-manager-applet
+NetworkManager-strongswan
+NetworkManager-openconnect
