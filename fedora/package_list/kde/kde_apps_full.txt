@@ -29,4 +29,3 @@ xarchiver
 htop
 libreoffice
 libreoffice-langpack-fa
-galculator

@@ -26,4 +26,3 @@ bleachbit
 tmux
 xarchiver
 htop
-galculator
