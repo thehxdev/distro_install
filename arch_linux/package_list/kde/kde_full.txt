@@ -34,3 +34,4 @@ libreoffice-still
 libreoffice-still-fr
 xarchiver
 htop
+galculator

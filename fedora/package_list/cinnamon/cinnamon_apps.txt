@@ -23,3 +23,4 @@ pix
 htop
 papirus-icon-theme
 breeze-cursor-theme
+galculator

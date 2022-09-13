@@ -42,3 +42,4 @@ neovim
 font-manager
 xarchiver
 htop
+galculator

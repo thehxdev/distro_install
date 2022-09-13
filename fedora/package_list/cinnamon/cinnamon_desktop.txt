@@ -38,10 +38,10 @@ lightdm-gtk
 lightdm-gtk-greeter-settings
 NetworkManager
 NetworkManager-adsl
-NetworkManager-pptp
 NetworkManager-sstp
 NetworkManager-wifi
-NetworkManager-openvpn
 network-manager-applet
 NetworkManager-strongswan
-NetworkManager-openconnect
+NetworkManager-pptp-gnome
+NetworkManager-openvpn-gnome
+NetworkManager-openconnect-gnome

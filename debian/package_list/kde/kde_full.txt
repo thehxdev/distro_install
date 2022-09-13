@@ -40,3 +40,4 @@ htop
 libreoffice
 libreoffice-l10n-fa
 breeze-gtk-theme
+galculator

@@ -47,3 +47,4 @@ tmux
 xarchiver
 htop
 breeze-gtk-theme
+galculator

@@ -37,3 +37,4 @@ tmux
 xarchiver
 htop
 darkmint-gtk-theme
+galculator

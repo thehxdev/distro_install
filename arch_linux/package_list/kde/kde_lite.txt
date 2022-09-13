@@ -40,3 +40,4 @@ font-manager
 tmxu
 xarchiver
 htop
+galculator

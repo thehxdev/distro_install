@@ -39,3 +39,4 @@ xarchiver
 htop
 arc-theme
 darkmint-gtk-theme
+galculator

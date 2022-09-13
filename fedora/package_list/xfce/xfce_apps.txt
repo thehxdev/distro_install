@@ -21,3 +21,4 @@ htop
 arc-theme
 papirus-icon-theme
 breeze-cursor-theme
+galculator

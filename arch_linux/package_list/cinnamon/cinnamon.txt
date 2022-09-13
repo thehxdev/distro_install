@@ -34,3 +34,4 @@ xarchiver
 xreader
 tmux
 htop
+galculator
