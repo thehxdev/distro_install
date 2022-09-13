@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 sudo echo "fastestmirror=True" >> /etc/dnf/dnf.conf
+sudo echo "defaultyes=True" >> /etc/dnf/dnf.conf
+sudo echo "keepcache=True" >> /etc/dnf/dnf.conf
 
 #sudo dnf config-manager --add-repo < ./mirror.txt
 
