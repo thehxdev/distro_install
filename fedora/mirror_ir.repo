@@ -1,6 +1,7 @@
 [ir_fedora]
 name=iran_fedora
-mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-36&arch=x86_64
+url=http://ftp.halifax.rwth-aachen.de/fedora/linux/releases/36/Everything/x86_64/os/
 fastestmirror=True
 enable=1
 gpgcheck=0
+#mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-36&arch=x86_64
