@@ -1,7 +1,6 @@
 [ir_fedora]
 name=iran_fedora
-baseurl=http://ftp.halifax.rwth-aachen.de/fedora/linux/releases/36/Everything/x86_64/os/
+baseurl=https://ftp.halifax.rwth-aachen.de/fedora/linux/releases/36/Everything/x86_64/os/
 enable=1
 gpgcheck=0
 #fastestmirror=True
-#mirrorlist=https://raw.githubusercontent.com/hxdevlover/distro_install/main/fedora/mirror.txt
