@@ -3,6 +3,7 @@
 #echo "fastestmirror=True" >> /etc/dnf/dnf.conf
 echo "defaultyes=True" >> /etc/dnf/dnf.conf
 echo "keepcache=True" >> /etc/dnf/dnf.conf
+echo "exclude='selinux-*'" >> /etc/dnf/dnf.conf
 
 #dnf config-manager --add-repo < ./mirror.txt
 
