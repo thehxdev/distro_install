@@ -1,1 +1,1 @@
-http://ftp.halifax.rwth-aachen.de/fedora/linux/releases/36/Everything/x86_64/os/
+https://ftp.halifax.rwth-aachen.de/fedora/linux/releases/36/Everything/x86_64/os/

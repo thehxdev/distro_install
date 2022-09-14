@@ -12,7 +12,6 @@ kwallet
 kwalletmanager
 kwayland-integration
 kwrited
-oxygen-sounds
 plasma-oxygen
 plasma-browser-integration
 plasma-disks
