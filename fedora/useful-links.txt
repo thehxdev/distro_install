@@ -1,0 +1,3 @@
+https://admin.fedoraproject.org/mirrormanager/
+
+https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-36&arch=x86_64
