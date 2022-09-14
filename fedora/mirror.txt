@@ -1,0 +1,10 @@
+http://mirror.nju.edu.cn/fedora/releases/36/Everything/x86_64/os/
+https://download.nus.edu.sg/mirror/fedora/linux/releases/36/Everything/x86_64/os/
+http://ftp.riken.jp/Linux/fedora/releases/36/Everything/x86_64/os/
+http://ftp.iij.ad.jp/pub/linux/Fedora/fedora/linux/releases/36/Everything/x86_64/os/
+https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/36/Everything/x86_64/os/
+https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/36/Everything/x86_64/os/
+http://mirrors.163.com/fedora/releases/36/Everything/x86_64/os/
+http://mirror2.totbb.net/fedora/linux/releases/36/Everything/x86_64/os/
+https://mirror.sjtu.edu.cn/fedora/linux/releases/36/Everything/x86_64/os/
+http://mirrors.bfsu.edu.cn/fedora/releases/36/Everything/x86_64/os/
