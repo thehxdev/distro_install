@@ -5,7 +5,7 @@ kcalc
 kfind
 spectacle
 okular
-chromium
+firefox
 arandr
 papirus-icon-theme
 gparted

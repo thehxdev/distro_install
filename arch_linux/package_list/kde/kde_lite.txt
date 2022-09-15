@@ -37,7 +37,7 @@ gvfs
 vim
 neovim
 font-manager
-tmxu
+tmux
 xarchiver
 htop
 galculator
