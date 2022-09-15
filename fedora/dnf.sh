@@ -5,8 +5,6 @@ echo "defaultyes=True" >> /etc/dnf/dnf.conf
 echo "keepcache=True" >> /etc/dnf/dnf.conf
 #echo "exclude='selinux-*'" >> /etc/dnf/dnf.conf
 
-#dnf config-manager --add-repo < ./mirror.txt
-
 mkdir /etc/repo_backup/
 mv /etc/yum.repos.d/* /etc/repo_backup/
 
