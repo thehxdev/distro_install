@@ -1,12 +1,12 @@
-xorg-x11-xfs
 xset
-xsetroot mkfontscale
-xorg-x11-server-Xwayland
-xorg-x11-xauth
-xorg-x11-server-Xephyr
-xorg-x11-server-Xnest
-xorg-x11-server-Xvfb
 sessreg
 setxkbmap
-xorg-x11-xsm
 xbacklight
+xorg-x11-xsm
+xsetroot mkfontscale
+xorg-x11-xfs
+xorg-x11-xauth
+xorg-x11-server-Xvfb
+xorg-x11-server-Xnest
+xorg-x11-server-Xephyr
+xorg-x11-server-Xwayland

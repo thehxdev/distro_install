@@ -20,4 +20,3 @@ gettext
 m4
 dnfdragora
 vim
-NetworkManager-wifi

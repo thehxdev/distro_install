@@ -7,7 +7,6 @@ spectacle
 okular
 firefox
 arandr
-papirus-icon-theme
 gparted
 gwenview
 unrar
@@ -27,3 +26,5 @@ bleachbit
 tmux
 xarchiver
 htop
+lxappearance
+papirus-icon-theme
