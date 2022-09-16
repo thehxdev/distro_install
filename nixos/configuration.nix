@@ -189,10 +189,10 @@
     # GTK themes
     #materia-theme
     #flat-remix-gtk
+    #libsForQt5.breeze-gtk
 
     # Icons
     #pop-icon-theme
-    #libsForQt5.breeze-gtk
     #flat-remix-icon-theme
     papirus-icon-theme
 
