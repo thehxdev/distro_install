@@ -226,34 +226,35 @@
     wget
     ffmpeg
     x264
+    x265
     libvpx
+    python3Full
+    afetch
+    #pfetch
     #galculator
     #brightnessctl
     #xclip
     #xfce.xfce4-xkb-plugin
-    python3Full
     #lxsession
     #lxappearance
-    #pfetch
-    afetch
     #neofetch
-    yt-dlp
     #tdesktop
-    viewnior
     #killall
+    viewnior
+    yt-dlp
     unrar
     unzip
     gzip
     p7zip
-    font-manager
     acpid
     cmake
     gcc
     #nodejs
     #nodePackages.npm
-    #flameshot
-    xdg-user-dirs
+    flameshot
     xdg-utils
+    xdg-user-dirs
+    font-manager
 
     # xorg
     xorg.xkill
