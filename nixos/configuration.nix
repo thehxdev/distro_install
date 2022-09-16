@@ -218,6 +218,7 @@
     #vlc
     mpv
     bleachbit
+    tmux
 
     # Others
     git
