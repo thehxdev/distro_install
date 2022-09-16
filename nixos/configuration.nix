@@ -75,19 +75,19 @@
   ### Window Managers
   #services.xserver.windowManager = {
   #  #dwm.enable = true;
-  #  bspwm = {
-  #    enable = true;
-  #    configFile = "/home/hx/.config/bspwm/bspwmrc";
-  #    sxhkd.configFile = "/home/hx/.config/bspwm/sxhkd/sxhkdrc";
-  #  };
-  #  qtile.enable = true;
-  #  xmonad.enable = true;
-  #  xmonad.enableContribAndExtras = true;
-  #  xmonad.extraPackages = hpkgs: [
-  #    hpkgs.xmonad
-  #    hpkgs.xmonad-contrib
-  #    hpkgs.xmonad-extras
-  #  ];
+  #  #bspwm = {
+  #  #  enable = true;
+  #  #  configFile = "/home/hx/.config/bspwm/bspwmrc";
+  #  #  sxhkd.configFile = "/home/hx/.config/bspwm/sxhkd/sxhkdrc";
+  #  #};
+  #  #qtile.enable = true;
+  #  #xmonad.enable = true;
+  #  #xmonad.enableContribAndExtras = true;
+  #  #xmonad.extraPackages = hpkgs: [
+  #  #  hpkgs.xmonad
+  #  #  hpkgs.xmonad-contrib
+  #  #  hpkgs.xmonad-extras
+  #  #];
   #};
 
   ### dwm and dmenu config path
@@ -97,14 +97,6 @@
   #   dmenu = prev.dmenu.overrideAttrs (old: { src = /home/hx/.dwm/dmenu ;});
   # })
   #];
-
-  # Fonts
-  fonts = {
-    enableDefaultFonts = true;
-  };
-
-  ### gvfs
-  services.gvfs.enable = true;
 
   ### picom
   #services.picom = {
@@ -124,6 +116,14 @@
   #    #};
   #  #};
   #};
+
+  # Fonts
+  fonts = {
+    enableDefaultFonts = true;
+  };
+
+  ### gvfs
+  services.gvfs.enable = true;
 
   ### Configure keymap in X11
   services.xserver.layout = "us,ir";
