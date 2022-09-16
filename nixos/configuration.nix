@@ -41,8 +41,10 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  ####
   services.xserver.videoDrivers = [ "modesetting" ];
   services.xserver.useGlamor = true;
+  ####
   #services.xserver.videoDrivers = [ "intel" ];
   #services.xserver.deviceSection = ''
   #  Option "DRI" "2"
@@ -225,9 +227,9 @@
     ffmpeg
     x264
     libvpx
-    galculator
-    brightnessctl
-    xclip
+    #galculator
+    #brightnessctl
+    #xclip
     #xfce.xfce4-xkb-plugin
     python3Full
     #lxsession
@@ -238,7 +240,6 @@
     yt-dlp
     #tdesktop
     viewnior
-    xorg.xkill
     #killall
     unrar
     unzip
@@ -250,11 +251,12 @@
     gcc
     #nodejs
     #nodePackages.npm
-    flameshot
+    #flameshot
     xdg-user-dirs
     xdg-utils
 
     # xorg
+    xorg.xkill
     xorg.libX11
     xorg.libXinerama
     xorg.libXft
@@ -295,5 +297,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
+  #system.stateVersion = "22.11"; # Unstable Version
 }
 
