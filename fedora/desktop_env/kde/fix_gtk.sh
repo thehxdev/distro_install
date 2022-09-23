@@ -21,4 +21,3 @@ curl https://raw.githubusercontent.com/hxdevlover/distro_install/main/gtk/.gtkrc
 mv $HOME/.config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini.bak
 
 curl https://raw.githubusercontent.com/hxdevlover/distro_install/main/gtk/settings.ini >> $HOME/.config/gtk-3.0/settings.ini
-
