@@ -287,7 +287,7 @@ function install_yay() {
 
 function install_xfce() {
     installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settigs \
-        xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-them \
+        xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-theme \
         unrar unzip p7zip dbus mpv openvpn networkmanager-openvpn networkmanager-pptp \
         networkmanager-openconnect networkmanager-l2tp networkmanager-strongswan alacritty \
         fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager xarchiver \
@@ -303,7 +303,7 @@ function install_xfce() {
 }
 
 function install_kde_lite() {
-    installit xorg sddm plasma pcmanfm firefox arandr papirus-icon-them ksystemlog \
+    installit xorg sddm plasma pcmanfm firefox arandr papirus-icon-theme ksystemlog \
         gparted ark kate kcalc krunner kfind kcron unrar unzip p7zip viewnior okular \
         dbus mpv openvpn networkmanager-openvpn networkmanager-pptp networkmanager-l2tp \
         networkmanager-strongswan networkmanager-openconnect spectacle kwallet kwalletmanager \
@@ -320,7 +320,7 @@ function install_kde_lite() {
 }
 
 function install_kde_standard() {
-    installit xorg sddm plasma firefox arandr papirus-icon-them dolphin dolphin-plugins \
+    installit xorg sddm plasma firefox arandr papirus-icon-theme dolphin dolphin-plugins \
         kde-system-meta ark kate kcalc krunner kfind donsole unrar unzip p7zip gwenview \
         okular dbus plasma-wayland-sessoin mpv networkmanager-openvpn networkmanager-pptp \
         networkmanager-l2tp networkmanager-strongswan networkmanager-openconnect openvpn \
@@ -336,7 +336,7 @@ function install_kde_standard() {
 }
 
 function install_kde_full() {
-    installit xorg sddm plasma kde-applications arandr firefox papirus-icon-them unrar \
+    installit xorg sddm plasma kde-applications arandr firefox papirus-icon-theme unrar \
         unzip p7zip dbus plasma-wayland-sessoin mpv vlc openvpn networkmanager-openvpn \
         networkmanager-openconnect networkmanager-pptp networkmanager-l2tp networkmanager-strongswan \
         alacritty fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager \
