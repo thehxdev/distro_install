@@ -243,7 +243,7 @@ function install_mbr_packages() {
         nfs-utils inetutils dnsutils bluez bluez-utils cups \
         bash-completion openssh reflector acpi acpi_call \
         pipewire pipewire-pulse pipewire-alsa alsa-utils \
-        acpid ipset iptables-nft os-prober ntfs-3g git
+        acpid ipset iptables os-prober ntfs-3g git
     judge "Install mbr base system packages"
 }
 
@@ -253,7 +253,7 @@ function install_gpt_packages() {
         nfs-utils inetutils dnsutils bluez bluez-utils cups \
         bash-completion openssh reflector acpi acpi_call \
         pipewire pipewire-pulse pipewire-alsa alsa-utils \
-        acpid ipset iptables-nft os-prober ntfs-3g git \
+        acpid ipset iptables os-prober ntfs-3g git \
         efibootmgr
     judge "Install gpt base system packages"
 }
