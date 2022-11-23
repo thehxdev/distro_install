@@ -176,12 +176,12 @@ function configure_users() {
 
     echo -e "${Blue}Creating a new user${Color_Off}"
     read -rp "Enter New user's username: " new_user_name
-    read -rp "Enter New user's password: " new_user_name
+    read -rp "Enter New user's password: " new_user_password
 
     useradd -m $new_user_name
     judge "Create user ${new_user_name}"
 
-    echo $new_user_name:$new_root_password | chpasswd
+    echo $new_user_name:$new_user_password | chpasswd
     judge "change user ${new_user_name} password"
 
     usermod -aG wheel $new_user_name 
