@@ -408,6 +408,10 @@ function gpt_base_system() {
     configure_users
 }
 
+function configure_pacman() {
+    echo -e "ParallelDownload = 5" >> /etc/pacman.conf
+}
+
 function main_menu() {
     clear
     echo -e '
