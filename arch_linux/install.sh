@@ -350,6 +350,11 @@ function install_kde_full() {
     judge "Set graphical target as default"
 }
 
+function install_en_fonts() {
+    installit ttf-roboto ttf-roboto-mono ttf-font-awesome ttf-ubuntu-font-family ttf-fira-code ttf-fira-mono adobe-source-code-pro-fonts adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts-cjk noto-fonts-emoji ttf-ionicons ttf-jetbrains-mono ttf-font-awesome
+    judge "Install fonts"
+}
+
 function install_kde_menu() {
     echo -e "============================== KDE Plasma =============================="
     echo -e "${Green}1) Lite (No Bloatware)${Color_Off}"
