@@ -16,7 +16,7 @@ OK="${Green}[OK]"
 ERROR="${Red}[ERROR]"
 INFO="${Yellow}[INFO]"
 SLEEP="sleep 0.2"
-PRIMARY_STORAGE_DEVICE=$(lsblk | grep -E "/$" | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}")
+PRIMARY_STORAGE_DEVICE=$(lsblk | grep -E "/$" | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}|vd[a-z]")
 REFLECTOR_CONFIG_FILE="/etc/xdg/reflector/reflector.conf"
 
 #print OK
@@ -141,7 +141,7 @@ function install_bootloader_mbr() {
             ;;
         3)
             print_info "Manual Installation"
-            lsblk | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}" | uniq
+            lsblk | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}|vd[a-z]" | uniq
             read -rp "Enter Installation target: " grub_installatoin_target
             if [[ -e "/dev/${grub_installatoin_target}" ]]; then
                 grub-install --target=i386-pc /dev/${grub_installatoin_target}
