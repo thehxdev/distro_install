@@ -305,6 +305,14 @@ function install_yay() {
     cd ~/
 }
 
+function install_en_fonts() {
+    installit ttf-roboto ttf-roboto-mono ttf-font-awesome ttf-ubuntu-font-family \
+        ttf-fira-code ttf-fira-mono adobe-source-code-pro-fonts adobe-source-han-sans-otc-fonts \
+        adobe-source-han-serif-otc-fonts noto-fonts-cjk noto-fonts-emoji ttf-ionicons \
+        ttf-jetbrains-mono ttf-font-awesome
+    judge "Install fonts"
+}
+
 function install_xfce() {
     installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
         xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-theme \
