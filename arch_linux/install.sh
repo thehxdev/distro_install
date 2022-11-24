@@ -306,7 +306,7 @@ function install_yay() {
 }
 
 function install_xfce() {
-    installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settigs \
+    installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
         xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-theme \
         unrar unzip p7zip dbus mpv openvpn networkmanager-openvpn networkmanager-pptp \
         networkmanager-openconnect networkmanager-l2tp networkmanager-strongswan alacritty \
