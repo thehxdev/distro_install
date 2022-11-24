@@ -322,6 +322,8 @@ function install_xfce() {
         xreader tmux htop galculator qt5ct kvantum
     judge "Install XFCE Desktop Environment"
 
+    install_en_fonts
+
     systemctl enable dbus
     judge "Enable dbus"
     systemctl enable lightdm.service
@@ -339,6 +341,8 @@ function install_kde_lite() {
         tmux xarchiver htop galculator
     judge "Install packages for KDE Plasma lite desktop"
 
+    install_en_fonts
+
     systemctl enable dbus
     judge "Enable dbus"
     systemctl enable sddm
@@ -354,6 +358,9 @@ function install_kde_standard() {
         networkmanager-l2tp networkmanager-strongswan networkmanager-openconnect openvpn \
         spectacle kwallet kwalletmanager alacritty fish zsh viewnior aria2 alsa-utils \
         pamixer bleachbit gvfs tmux vim neovim font-manager xarchiver htop galculator
+    judge "Install packages for KDE Plasma Standard desktop"
+
+    install_en_fonts
 
     systemctl enable dbus
     systemctl enable sddm
@@ -369,6 +376,9 @@ function install_kde_full() {
         networkmanager-openconnect networkmanager-pptp networkmanager-l2tp networkmanager-strongswan \
         alacritty fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager \
         libreoffice-still libreoffice-still-fa xarchiver htop galculator
+    judge "Install packages for KDE Plasma Full desktop"
+
+    install_en_fonts
 
     systemctl enable dbus
     judge "Enable dbus"
