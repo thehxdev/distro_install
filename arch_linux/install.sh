@@ -16,7 +16,7 @@ OK="${Green}[OK]"
 ERROR="${Red}[ERROR]"
 INFO="${Yellow}[INFO]"
 SLEEP="sleep 0.2"
-PRIMARY_STORAGE_DEVICE=$(lsblk | grep -E "/$" | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}")
+PRIMARY_STORAGE_DEVICE=$(lsblk | grep -E "/$" | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}|vd[a-z]")
 REFLECTOR_CONFIG_FILE="/etc/xdg/reflector/reflector.conf"
 PACMAN_CONFIG="/etc/pacman.conf"
 
@@ -143,7 +143,7 @@ function install_bootloader_mbr() {
             ;;
         3)
             print_info "Manual Installation"
-            lsblk | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}" | uniq
+            lsblk | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}|vd[a-z]" | uniq
             read -rp "Enter Installation target: " grub_installatoin_target
             if [[ -e "/dev/${grub_installatoin_target}" ]]; then
                 grub-install --target=i386-pc /dev/${grub_installatoin_target}
@@ -178,12 +178,12 @@ function configure_users() {
 
     echo -e "${Blue}Creating a new user${Color_Off}"
     read -rp "Enter New user's username: " new_user_name
-    read -rp "Enter New user's password: " new_user_name
+    read -rp "Enter New user's password: " new_user_password
 
     useradd -m $new_user_name
     judge "Create user ${new_user_name}"
 
-    echo $new_user_name:$new_root_password | chpasswd
+    echo $new_user_name:$new_user_password | chpasswd
     judge "change user ${new_user_name} password"
 
     usermod -aG wheel $new_user_name 
@@ -307,7 +307,7 @@ function install_yay() {
 
 function install_xfce() {
     installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settigs \
-        xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-them \
+        xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-theme \
         unrar unzip p7zip dbus mpv openvpn networkmanager-openvpn networkmanager-pptp \
         networkmanager-openconnect networkmanager-l2tp networkmanager-strongswan alacritty \
         fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager xarchiver \
@@ -323,7 +323,7 @@ function install_xfce() {
 }
 
 function install_kde_lite() {
-    installit xorg sddm plasma pcmanfm firefox arandr papirus-icon-them ksystemlog \
+    installit xorg sddm plasma pcmanfm firefox arandr papirus-icon-theme ksystemlog \
         gparted ark kate kcalc krunner kfind kcron unrar unzip p7zip viewnior okular \
         dbus mpv openvpn networkmanager-openvpn networkmanager-pptp networkmanager-l2tp \
         networkmanager-strongswan networkmanager-openconnect spectacle kwallet kwalletmanager \
@@ -340,7 +340,7 @@ function install_kde_lite() {
 }
 
 function install_kde_standard() {
-    installit xorg sddm plasma firefox arandr papirus-icon-them dolphin dolphin-plugins \
+    installit xorg sddm plasma firefox arandr papirus-icon-theme dolphin dolphin-plugins \
         kde-system-meta ark kate kcalc krunner kfind donsole unrar unzip p7zip gwenview \
         okular dbus plasma-wayland-sessoin mpv networkmanager-openvpn networkmanager-pptp \
         networkmanager-l2tp networkmanager-strongswan networkmanager-openconnect openvpn \
@@ -356,7 +356,7 @@ function install_kde_standard() {
 }
 
 function install_kde_full() {
-    installit xorg sddm plasma kde-applications arandr firefox papirus-icon-them unrar \
+    installit xorg sddm plasma kde-applications arandr firefox papirus-icon-theme unrar \
         unzip p7zip dbus plasma-wayland-sessoin mpv vlc openvpn networkmanager-openvpn \
         networkmanager-openconnect networkmanager-pptp networkmanager-l2tp networkmanager-strongswan \
         alacritty fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager \
