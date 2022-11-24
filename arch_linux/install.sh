@@ -16,8 +16,9 @@ OK="${Green}[OK]"
 ERROR="${Red}[ERROR]"
 INFO="${Yellow}[INFO]"
 SLEEP="sleep 0.2"
-PRIMARY_STORAGE_DEVICE=$(lsblk | grep -E "/$" | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}|vd[a-z]")
+PRIMARY_STORAGE_DEVICE=$(lsblk | grep -E "/$" | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}")
 REFLECTOR_CONFIG_FILE="/etc/xdg/reflector/reflector.conf"
+PACMAN_CONFIG="/etc/pacman.conf"
 
 #print OK
 function print_ok() {
@@ -35,6 +36,7 @@ function print_info() {
 }
 
 function installit() {
+    configure_pacman
     pacman -Sy --needed --noconfirm --disable-download-timeout $*
 }
 
@@ -141,7 +143,7 @@ function install_bootloader_mbr() {
             ;;
         3)
             print_info "Manual Installation"
-            lsblk | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}|vd[a-z]" | uniq
+            lsblk | grep -Eo "sd[a-z]|nvme[0-9]{1,2}n[0-9]{1,2}" | uniq
             read -rp "Enter Installation target: " grub_installatoin_target
             if [[ -e "/dev/${grub_installatoin_target}" ]]; then
                 grub-install --target=i386-pc /dev/${grub_installatoin_target}
@@ -176,12 +178,12 @@ function configure_users() {
 
     echo -e "${Blue}Creating a new user${Color_Off}"
     read -rp "Enter New user's username: " new_user_name
-    read -rp "Enter New user's password: " new_user_password
+    read -rp "Enter New user's password: " new_user_name
 
     useradd -m $new_user_name
     judge "Create user ${new_user_name}"
 
-    echo $new_user_name:$new_user_password | chpasswd
+    echo $new_user_name:$new_root_password | chpasswd
     judge "change user ${new_user_name} password"
 
     usermod -aG wheel $new_user_name 
@@ -237,13 +239,31 @@ function halifax_pacman_mirror() {
     judge "Sync Pacman"
 }
 
+function configure_pacman() {
+    if grep "SigLevel = TrustAll" ${PACMAN_CONFIG}; then
+        print_ok "SigLevel is configured to Trust All"
+    else
+        sed -ibak "/^SigLevel/d" ${PACMAN_CONFIG}
+        judge "Remove old SigLevel"
+        echo -e "SigLevel = TrustAll" >> ${PACMAN_CONFIG}
+        judge "Add SigLevel"
+    fi
+
+    if grep -E "^ParallelDownloads" ${PACMAN_CONFIG}; then
+        print_ok "Parallel Download is enabled"
+    else
+        echo -e "ParallelDownloads = 5" >> ${PACMAN_CONFIG}
+        judge "Enable Parallel Downloads"
+    fi
+}
+
 function install_mbr_packages() {
     installit grub networkmanager network-manager-applet \
         dialog mtools dosfstools xdg-user-dirs xdg-utils \
         nfs-utils inetutils dnsutils bluez bluez-utils cups \
         bash-completion openssh reflector acpi acpi_call \
         pipewire pipewire-pulse pipewire-alsa alsa-utils \
-        acpid ipset iptables os-prober ntfs-3g git
+        acpid ipset iptables-nft os-prober ntfs-3g git
     judge "Install mbr base system packages"
 }
 
@@ -253,7 +273,7 @@ function install_gpt_packages() {
         nfs-utils inetutils dnsutils bluez bluez-utils cups \
         bash-completion openssh reflector acpi acpi_call \
         pipewire pipewire-pulse pipewire-alsa alsa-utils \
-        acpid ipset iptables os-prober ntfs-3g git \
+        acpid ipset iptables-nft os-prober ntfs-3g git \
         efibootmgr
     judge "Install gpt base system packages"
 }
@@ -287,7 +307,7 @@ function install_yay() {
 
 function install_xfce() {
     installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settigs \
-        xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-theme \
+        xfce4 xfce4-goodies xfce4-xkb-plugin arandr firefox papirus-icon-them \
         unrar unzip p7zip dbus mpv openvpn networkmanager-openvpn networkmanager-pptp \
         networkmanager-openconnect networkmanager-l2tp networkmanager-strongswan alacritty \
         fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager xarchiver \
@@ -303,7 +323,7 @@ function install_xfce() {
 }
 
 function install_kde_lite() {
-    installit xorg sddm plasma pcmanfm firefox arandr papirus-icon-theme ksystemlog \
+    installit xorg sddm plasma pcmanfm firefox arandr papirus-icon-them ksystemlog \
         gparted ark kate kcalc krunner kfind kcron unrar unzip p7zip viewnior okular \
         dbus mpv openvpn networkmanager-openvpn networkmanager-pptp networkmanager-l2tp \
         networkmanager-strongswan networkmanager-openconnect spectacle kwallet kwalletmanager \
@@ -320,7 +340,7 @@ function install_kde_lite() {
 }
 
 function install_kde_standard() {
-    installit xorg sddm plasma firefox arandr papirus-icon-theme dolphin dolphin-plugins \
+    installit xorg sddm plasma firefox arandr papirus-icon-them dolphin dolphin-plugins \
         kde-system-meta ark kate kcalc krunner kfind donsole unrar unzip p7zip gwenview \
         okular dbus plasma-wayland-sessoin mpv networkmanager-openvpn networkmanager-pptp \
         networkmanager-l2tp networkmanager-strongswan networkmanager-openconnect openvpn \
@@ -336,7 +356,7 @@ function install_kde_standard() {
 }
 
 function install_kde_full() {
-    installit xorg sddm plasma kde-applications arandr firefox papirus-icon-theme unrar \
+    installit xorg sddm plasma kde-applications arandr firefox papirus-icon-them unrar \
         unzip p7zip dbus plasma-wayland-sessoin mpv vlc openvpn networkmanager-openvpn \
         networkmanager-openconnect networkmanager-pptp networkmanager-l2tp networkmanager-strongswan \
         alacritty fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager \
@@ -348,11 +368,6 @@ function install_kde_full() {
     judge "Enable sddm"
     systemctl set-default graphical.target
     judge "Set graphical target as default"
-}
-
-function install_en_fonts() {
-    installit ttf-roboto ttf-roboto-mono ttf-font-awesome ttf-ubuntu-font-family ttf-fira-code ttf-fira-mono adobe-source-code-pro-fonts adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts noto-fonts-cjk noto-fonts-emoji ttf-ionicons ttf-jetbrains-mono ttf-font-awesome
-    judge "Install fonts"
 }
 
 function install_kde_menu() {
@@ -411,10 +426,6 @@ function gpt_base_system() {
     configure_hosts
     install_gpt_packages
     configure_users
-}
-
-function configure_pacman() {
-    echo -e "ParallelDownload = 5" >> /etc/pacman.conf
 }
 
 function main_menu() {
