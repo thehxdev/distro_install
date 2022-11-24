@@ -240,19 +240,19 @@ function halifax_pacman_mirror() {
 }
 
 function configure_pacman() {
-    if grep "SigLevel = TrustAll" ${PACMAN_CONFIG}; then
+    if grep -E "^SigLevel = TrustAll" ${PACMAN_CONFIG}; then
         print_ok "SigLevel is configured to Trust All"
     else
         sed -ibak "/^SigLevel/d" ${PACMAN_CONFIG}
         judge "Remove old SigLevel"
-        echo -e "SigLevel = TrustAll" >> ${PACMAN_CONFIG}
+        sed -ibak "/^#ParallelDownloads/i SigLevel = TrustAll" ${PACMAN_CONFIG}
         judge "Add SigLevel"
     fi
 
     if grep -E "^ParallelDownloads" ${PACMAN_CONFIG}; then
         print_ok "Parallel Download is enabled"
     else
-        echo -e "ParallelDownloads = 5" >> ${PACMAN_CONFIG}
+        sed -ibak "/^#ParallelDownloads/i ParallelDownloads = 5" ${PACMAN_CONFIG}
         judge "Enable Parallel Downloads"
     fi
 }
