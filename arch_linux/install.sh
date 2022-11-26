@@ -388,6 +388,23 @@ function install_kde_full() {
     judge "Set graphical target as default"
 }
 
+function install_cinnamon() {
+    installit xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings cinnamon \
+        cinnamon-control-center arandr firefox papirus-icon-theme unrar unzip p7zip \
+        archlinux-wallpaper dbus mpv openvpn networkmanager-openvpn networkmanager-pptp \
+        networkmanager-openconnect networkmanager-l2tp networkmanager-strongswan alacritty \
+        fish zsh aria2 alsa-utils pamixer bleachbit gvfs vim neovim font-manager xarchiver \
+        xreader tmux htop galculator
+    judge "Install Cinnamon"
+
+    systemctl enable dbus
+    judge "Enable dbus"
+    systemctl enable lightdm
+    judge "Enable lightdm"
+    systemctl set-default graphical.target
+    judge "Set graphical target as default"
+}
+
 function install_kde_menu() {
     echo -e "============================== KDE Plasma =============================="
     echo -e "${Green}1) Lite (No Bloatware)${Color_Off}"
@@ -467,7 +484,8 @@ function main_menu() {
     echo -e "=============================== DE ==============================="
     echo -e "${Green}7) Install XFCE Desktop${Color_Off}"
     echo -e "${Green}8) Install KDE Desktop${Color_Off}"
-    echo -e "${Yellow}9) Exit${Color_Off}"
+    echo -e "${Green}9) Install Cinnamon Desktop${Color_Off}"
+    echo -e "${Yellow}10) Exit${Color_Off}"
 
     read -rp "Enter an Option: " menu_num
     case $menu_num in
@@ -495,6 +513,11 @@ function main_menu() {
             install_kde_menu
             ;;
         9)
+            print_info "This option will install Cinnamon Desktop Environment"
+            read -n1 -r -p "Press any key to continue..."
+            install_cinnamon
+            ;;
+        10)
             print_ok "Exit"
             exit 0
             ;;
